@@ -1,0 +1,140 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #fdfdfd;
+    color: #333;
+}
+
+.course-container {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+.course-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background: #2c3e50;
+    color: #fff;
+}
+
+.course-header nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s;
+}
+
+.course-header nav a:hover {
+    color: #f39c12;
+}
+
+.logo {
+    font-size: 1.5rem;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 40px;
+    background: linear-gradient(135deg, #2980b9, #6dd5fa);
+    color: #fff;
+}
+
+.hero-text {
+    max-width: 50%;
+}
+
+.hero-text h2 {
+    font-size: 2.5rem;
+}
+
+.cta-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 24px;
+    background: #fff;
+    color: #2980b9;
+    font-weight: bold;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.cta-btn:hover {
+    background: #f1f1f1;
+}
+
+.hero-img img {
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.3);
+}
+
+/* About Section */
+.about {
+    padding: 60px 40px;
+    text-align: center;
+    background: #fff;
+}
+
+.about p {
+    max-width: 700px;
+    margin: 0 auto;
+    color: #555;
+}
+
+/* Curriculum Section */
+.curriculum {
+    padding: 60px 40px;
+    background: #f9f9f9;
+}
+
+.curriculum ul {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 0;
+    list-style: none;
+}
+
+.curriculum li {
+    background: #fff;
+    margin: 10px 0;
+    padding: 15px;
+    border-left: 5px solid #2980b9;
+    border-radius: 5px;
+    box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
+}
+
+/* Enroll Section */
+.enroll {
+    padding: 60px 40px;
+    text-align: center;
+    background: #2980b9;
+    color: #fff;
+}
+
+.enroll-btn {
+    margin-top: 20px;
+    padding: 12px 24px;
+    background: #f39c12;
+    color: #fff;
+    font-size: 1rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.enroll-btn:hover {
+    background: #d68910;
+}
+
+/* Footer */
+.footer {
+    padding: 20px;
+    text-align: center;
+    background: #2c3e50;
+    color: #fff;
+}
