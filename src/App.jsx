@@ -8,60 +8,46 @@ export default function App() {
     };
 
     return (
-        <div style={{ fontFamily: "Arial, sans-serif", margin: 0, padding: 0 }}>
+        <div className="font-sans m-0 p-0">
             {/* Hero Section */}
-            <section
-                style={{
-                    background: "linear-gradient(135deg, #004e92, #000428)",
-                    color: "white",
-                    textAlign: "center",
-                    padding: "60px 20px",
-                }}
-            >
-                <h1 style={{ fontSize: "2.5rem", margin: "10px 0" }}>
+            <section className="bg-gradient-to-br from-[#004e92] to-[#000428] text-white text-center px-5 py-16">
+                <h1 className="text-4xl font-bold my-2">
                     Mastering Data Science with Python
                 </h1>
-                <p style={{ fontSize: "1.2rem", marginBottom: "20px" }}>
+                <p className="text-lg mb-5">
                     Learn Data Science with Python – From Zero to Job Ready
                 </p>
                 <a
                     href="#pricing"
-                    style={{
-                        background: "orange",
-                        padding: "12px 25px",
-                        borderRadius: "6px",
-                        textDecoration: "none",
-                        color: "white",
-                        fontWeight: "bold",
-                    }}
+                    className="bg-orange-500 px-6 py-3 rounded-md no-underline text-white font-bold"
                 >
                     Enroll Now
                 </a>
             </section>
 
             {/* Course Overview */}
-            <section style={{ padding: "50px 20px", textAlign: "center" }}>
-                <h2>Course Overview</h2>
-                <p style={{ maxWidth: "700px", margin: "10px auto" }}>
+            <section className="px-5 py-12 text-center">
+                <h2 className="text-2xl font-bold">Course Overview</h2>
+                <p className="max-w-2xl mx-auto my-2">
                     This course covers Python fundamentals, data analysis, machine
                     learning, and visualization. By the end, you’ll have hands-on
                     experience and projects to showcase.
                 </p>
-                <ul style={{ listStyle: "none", padding: 0, marginTop: "20px" }}>
+                <ul className="list-none p-0 mt-5 space-y-2">
                     <li>✔ Data Analysis with Pandas & NumPy</li>
                     <li>✔ Machine Learning with Scikit-learn</li>
                     <li>✔ Data Visualization with Matplotlib & Seaborn</li>
                     <li>✔ Real-world projects and case studies</li>
                 </ul>
-                <p style={{ marginTop: "15px", fontStyle: "italic" }}>
+                <p className="mt-4 italic">
                     Duration: 12 weeks | Mode: Self-paced
                 </p>
             </section>
 
             {/* Curriculum Section */}
-            <section style={{ padding: "50px 20px" }}>
-                <h2 style={{ textAlign: "center" }}>Course Curriculum</h2>
-                <div style={{ maxWidth: "800px", margin: "20px auto" }}>
+            <section className="px-5 py-12">
+                <h2 className="text-2xl font-bold text-center">Course Curriculum</h2>
+                <div className="max-w-3xl mx-auto mt-5">
                     {[
                         {
                             title: "Introduction to Python for Data Science",
@@ -81,27 +67,18 @@ export default function App() {
                     ].map((module, index) => (
                         <div
                             key={index}
-                            style={{
-                                border: "1px solid #ccc",
-                                borderRadius: "6px",
-                                marginBottom: "15px",
-                                padding: "15px",
-                            }}
+                            className="border border-gray-300 rounded-md mb-4 p-4"
                         >
                             <h3
-                                style={{
-                                    margin: 0,
-                                    cursor: "pointer",
-                                    color: "#004e92",
-                                }}
+                                className="m-0 cursor-pointer text-[#004e92] font-semibold"
                                 onClick={() => toggleModule(index)}
                             >
                                 {module.title} ({module.duration})
                             </h3>
                             {openModule === index && (
-                                <ul style={{ marginTop: "10px" }}>
+                                <ul className="mt-3 list-disc list-inside">
                                     {module.lessons.map((lesson, i) => (
-                                        <li key={i}>- {lesson}</li>
+                                        <li key={i}>{lesson}</li>
                                     ))}
                                 </ul>
                             )}
@@ -111,34 +88,27 @@ export default function App() {
             </section>
 
             {/* Instructor Section */}
-            <section
-                style={{
-                    background: "#f5f5f5",
-                    padding: "50px 20px",
-                    textAlign: "center",
-                }}
-            >
-                <h2>Meet Your Instructor Divyansh Bhardwaj "DBC"</h2>
+            <section className="bg-gray-100 px-5 py-12 text-center">
+                <h2 className="text-2xl font-bold">
+                    Meet Your Instructor Divyansh Bhardwaj "DBC"
+                </h2>
                 <img
                     src="https://thafd.bing.com/th/id/OIP.nP1iwdRjPKu-RF4wV-0-1gAAAA?w=172&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3?text=Instructor"
                     alt="Instructor"
-                    style={{ borderRadius: "50%", margin: "20px 0" }}
+                    className="rounded-full mx-auto my-5"
                 />
-                <p style={{ maxWidth: "600px", margin: "0 auto" }}>
-
+                <p className="max-w-xl mx-auto">
                     Dedicated Programming Trainer with a Passion for Developing Future Tech Talent.
-
                 </p>
             </section>
 
             {/* Testimonials */}
-            <section style={{ padding: "50px 20px", textAlign: "center" }}>
-                <h2>What Students Say</h2>
-                <blockquote style={{ fontStyle: "italic", margin: "20px auto" }}>
-                    “This course gave me the confidence to land my first Data Science job!”
-                    — Anjali, Student
+            <section className="px-5 py-12 text-center">
+                <h2 className="text-2xl font-bold">What Students Say</h2>
+                <blockquote className="italic my-5 max-w-xl mx-auto">
+                    “This course gave me the confidence to land my first Data Science job!” — Anjali, Student
                 </blockquote>
-                <blockquote style={{ fontStyle: "italic", margin: "20px auto" }}>
+                <blockquote className="italic my-5 max-w-xl mx-auto">
                     “Very practical and hands-on. Loved the projects.” — Raj, Professional
                 </blockquote>
             </section>
@@ -146,53 +116,33 @@ export default function App() {
             {/* Pricing & Enrollment */}
             <section
                 id="pricing"
-                style={{
-                    background: "#004e92",
-                    color: "white",
-                    padding: "50px 20px",
-                    textAlign: "center",
-                }}
+                className="bg-[#004e92] text-white px-5 py-12 text-center"
             >
-                <h2>Pricing & Enrollment</h2>
-                <p style={{ fontSize: "1.5rem", margin: "20px 0" }}>
+                <h2 className="text-2xl font-bold">Pricing & Enrollment</h2>
+                <p className="text-2xl my-5">
                     ₹4,999 | Lifetime Access | Certificate Included
                 </p>
                 <a
                     href="#"
-                    style={{
-                        background: "orange",
-                        padding: "14px 30px",
-                        borderRadius: "6px",
-                        textDecoration: "none",
-                        color: "white",
-                        fontWeight: "bold",
-                        fontSize: "1.1rem",
-                    }}
+                    className="bg-orange-500 px-7 py-3 rounded-md no-underline text-white font-bold text-lg"
                 >
                     Enroll Now
                 </a>
             </section>
 
             {/* Footer */}
-            <footer
-                style={{
-                    background: "#111",
-                    color: "white",
-                    padding: "20px",
-                    textAlign: "center",
-                }}
-            >
+            <footer className="bg-black text-white px-5 py-5 text-center">
                 <p>
                     © 2025 Mastering Data Science with Python |{" "}
-                    <a href="#" style={{ color: "orange", textDecoration: "none" }}>
+                    <a href="#" className="text-orange-500 no-underline">
                         FAQ
                     </a>{" "}
                     |{" "}
-                    <a href="#" style={{ color: "orange", textDecoration: "none" }}>
+                    <a href="#" className="text-orange-500 no-underline">
                         Privacy Policy
                     </a>{" "}
                     |{" "}
-                    <a href="#" style={{ color: "orange", textDecoration: "none" }}>
+                    <a href="#" className="text-orange-500 no-underline">
                         Terms
                     </a>
                 </p>
