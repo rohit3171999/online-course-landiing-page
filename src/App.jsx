@@ -5,6 +5,8 @@ import Instructor from "./components/Instructor.jsx";
 import Testimonial from "./components/Testimonial.jsx";
 import PriceEnrollment from "./components/PriceEnrollment.jsx";
 import Footer from "./components/Footer.jsx";
+import NewTestimonials from "./components/NewTestimonials.jsx";
+import {courseTestimonials} from "./NewDataset.js";
 
 function App(){
     return (
@@ -16,6 +18,17 @@ function App(){
             <Testimonial/>
             <PriceEnrollment/>
             <Footer/>
+            <div className="grid grid-cols-4 gap-4">
+                {courseTestimonials.map(courseTestimonial => (
+                    <NewTestimonials
+                        key={courseTestimonial.username}
+                        userName={courseTestimonial.username}
+                        imageURL={courseTestimonial.imageURL}
+                        userReview={courseTestimonial.userReview}
+                        altText={courseTestimonial.altText}
+                    />
+                ))}
+            </div>
 
         </>
     );
